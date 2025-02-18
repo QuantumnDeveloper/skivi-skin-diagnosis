@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - SKIVI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #001f3f; /* Deep blue background */
+            color: white; /* White text */
+        }
+        .result-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s;
+        }
+        .result-section:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-section">
+            <h1>Skin Condition Analysis Result</h1>
+            <div class="result-card">
+                <p><strong>Condition:</strong> {{ condition }}</p>
+                <p><strong>Severity Level:</strong> {{ severity }}</p>
+                <p><strong>Precautions:</strong> {{ precautions }}</p>
+                <a href="/" class="btn btn-primary" style="background-color: #ff7f50; color: white; border: none;">Upload another image</a>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 SKIVI. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

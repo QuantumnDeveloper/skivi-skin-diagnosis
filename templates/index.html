@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKIVI - Skin Condition Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #001f3f; /* Deep blue background */
+            color: white; /* White text */
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 80px 0;
+            background-color: rgba(0, 31, 63, 0.8);
+            border-bottom: 5px solid #ff7f50;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.5s ease;
+        }
+        .header h1 {
+            font-size: 3rem;
+            color: #ff7f50; /* Coral for title */
+        }
+        .header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: transform 0.5s, background-color 0.5s;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .upload-btn {
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1.2rem;
+        }
+        .upload-btn:hover {
+            background-color: #ff6347; /* Tomato color */
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to SKIVI</h1>
+            <p>Your Personal Skin Condition Analysis Tool</p>
+            <p>Upload an image of your skin condition and get instant analysis, severity level, and recommendations.</p>
+        </div>
+        <div class="section">
+            <h2>What is SKIVI?</h2>
+            <p>SKIVI is a cutting-edge tool designed to analyze skin conditions using advanced machine learning algorithms. Simply upload a picture of your skin condition, and our tool will identify the issue, assess its severity, and provide tailored precautions and treatment options.</p>
+            <p>Our goal is to empower individuals with knowledge about their skin health, offering insights and guidance that can lead to better care and treatment decisions. With SKIVI, understanding your skin condition has never been easier.</p>
+        </div>
+        <div class="section">
+            <h2>How SKIVI Works</h2>
+            <p>Once you upload your image, SKIVI processes it using trained models that recognize various skin conditions. Our AI-driven analysis ensures quick and reliable results, helping you understand your skin health better.</p>
+            <p>The tool analyzes features such as texture, color variations, and patterns within the skin image to provide an accurate diagnosis. Users receive personalized insights that can aid in their treatment journey.</p>
+        </div>
+        <div class="section">
+            <h2>Meet the Creators</h2>
+            <p>SKIVI was developed by a dedicated team of engineering students</p>
+            <ul class="list-unstyled">
+                <li><strong>Arunima Banerjee</strong></li>
+                <li><strong>Animesh Sharma</strong></li>
+                <li><strong>Anusha K</strong></li>
+                <li><strong>Varun Karthick K</strong></li>
+            </ul>
+            <p>Our commitment to advancing technology for healthcare is reflected in the creation of SKIVI. We believe that innovation in AI can greatly improve how we manage skin health.</p>
+        </div>
+        <div class="section">
+            <h2>Upload Image for Analysis</h2>
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" name="file" accept="image/*" required class="form-control">
+                </div>
+                <button type="submit" class="upload-btn">Analyze</button>
+            </form>
+        </div>
+        <footer>
+            <p>&copy; 2024 SKIVI. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
